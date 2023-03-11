@@ -8,6 +8,7 @@ public class TestClass extends Test
     
     {  
     	
+    	CustomerType customerType= CustomerType.Default;
     	
     	ArrayList<Student> student= new ArrayList();
     	//student.add("Sam");
