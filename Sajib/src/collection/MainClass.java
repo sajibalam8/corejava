@@ -83,6 +83,8 @@ public class MainClass {
 			map.remove("222", 222);
 			//se
 			//System.out.println("map--------------"+map);
+			
+			map.
 		
 	}
 }
