@@ -6,10 +6,10 @@ public class Customer {
 	private CustomerType type;
 	private String id;
 	private String name;
-	
+
 	private ArrayList<Product> cart = new ArrayList();
 
-	public Customer(CustomerType type, String id, String name ) {
+	public Customer(CustomerType type, String id, String name) {
 		super();
 		this.type = type;
 		this.id = id;
@@ -39,7 +39,7 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public ArrayList<Product> getCart() {
 		return cart;
 	}
@@ -48,20 +48,21 @@ public class Customer {
 		this.cart = cart;
 	}
 
-
 	public void addProduct(Product product) {
 
 		cart.add(product);
 
 	}
 
-	public void removeProduct(Product product) {
+	public void removeProduct(String itemNumber) {
 
-		cart.remove(product);
+		for (Product p : cart) {
+
+			if (itemNumber.equals(p.getItemNumber()))
+				cart.remove(p);
+		}
 
 	}
-	
-	
 
 	public double getTotalPrice() {
 
@@ -79,7 +80,6 @@ public class Customer {
 		return sum;
 
 	}
-	
 
 	@Override
 	public String toString() {

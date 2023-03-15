@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Store implements IStore {
 	ArrayList<Product> products = new ArrayList();
-	ArrayList<Customer> customers = new ArrayList();
+	public  ArrayList<Customer> customers = new ArrayList();
 	ArrayList<Product> soldProducts = new ArrayList();
 
 	@Override
@@ -42,8 +42,7 @@ public class Store implements IStore {
 
 	}
 
-	@Override
-	public void getReceipt(Customer customer) {
+	public  void getReceipt(Customer customer) {
 		System.out.println(customer.getName());
 		for (Product p : customer.getCart()) {
 			System.out.println(p);

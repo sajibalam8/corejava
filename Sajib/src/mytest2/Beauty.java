@@ -19,7 +19,8 @@ public class Beauty extends Product {
 
 	@Override
 	public String toString() {
-		return "Beauty [color=" + color + "]";
+		return "Beauty [color=" + color + "]"+super.toString()
+		;
 	}
 
 }
